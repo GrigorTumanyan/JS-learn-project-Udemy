@@ -1,62 +1,19 @@
-import { footerLinks } from '../data'
+import { footerLinks, socialLinks } from '../data'
+import FooterLink from './FooterLink'
+import SocialLink from './SocialLink'
 
 const Footer = () => {
   return (
     <footer className='section footer'>
       <ul className='footer-links'>
-        {footerLinks.map}
-        <li>
-          <a href='#home' className='footer-link'>
-            home
-          </a>
-        </li>
-        <li>
-          <a href='#about' className='footer-link'>
-            about
-          </a>
-        </li>
-        <li>
-          <a href='#services' className='footer-link'>
-            services
-          </a>
-        </li>
-        <li>
-          <a href='#featured' className='footer-link'>
-            featured
-          </a>
-        </li>
+        {footerLinks.map((link) => (
+          <FooterLink id={link.id} href={link.href} text={link.text} />
+        ))}
       </ul>
       <ul className='footer-icons'>
-        <li>
-          <a
-            href='https://www.twitter.com'
-            target='_blank'
-            rel='noreferrer'
-            className='footer-icon'
-          >
-            <i className='fab fa-facebook'></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href='https://www.twitter.com'
-            target='_blank'
-            rel='noreferrer'
-            className='footer-icon'
-          >
-            <i className='fab fa-twitter'></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href='https://www.twitter.com'
-            target='_blank'
-            rel='noreferrer'
-            className='footer-icon'
-          >
-            <i className='fab fa-squarespace'></i>
-          </a>
-        </li>
+        {socialLinks.map((link) => (
+          <SocialLink id={link.id} href={link.href} icon={link.icon} />
+        ))}
       </ul>
       <p className='copyright'>
         copyright &copy; Backroads travel tours company

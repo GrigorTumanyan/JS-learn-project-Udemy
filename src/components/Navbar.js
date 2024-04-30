@@ -2,7 +2,6 @@ import logo from '../images/logo.svg'
 import { headerLinks, socialLinks } from '../data'
 
 const Navbar = () => {
-  console.log(headerLinks)
   return (
     <nav className='navbar'>
       <div className='nav-center'>
@@ -12,7 +11,6 @@ const Navbar = () => {
             <i className='fas fa-bars'></i>
           </button>
         </div>
-        {/* <!-- left this comment on purpose --> */}
         <ul className='nav-links' id='nav-links'>
           {headerLinks.map((link) => {
             return (
